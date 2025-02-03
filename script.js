@@ -26,20 +26,6 @@ const audioPlayer = (() => {
     playlistTrackTemplate: document.querySelector("#track-template"),
   };
 
-  // Affichage des erreurs
-  const displayError = (message) => {
-    const errorElement = document.createElement("div");
-    errorElement.textContent = message;
-    errorElement.style.color = "red";
-    document.body.prepend(errorElement);
-  };
-
-  // Vérification de la présence des éléments obligatoires
-  Object.entries(elements).forEach(([key, element]) => {
-    if (!element)
-      displayError(`Élément "${key}" manquant. Veuillez consulter le README.`);
-  });
-
   // Mise à jour des informations de la piste
   const updateTrackInfo = () => {
     const track = tracks[currentTrackIndex];
@@ -93,6 +79,9 @@ const audioPlayer = (() => {
     const currentTime = audio.currentTime;
     const duration = audio.duration || 0;
     const progress = currentTime / duration || 0;
+    const totalLength = document
+      .querySelector("#progressPath")
+      .getTotalLength();
     if (elements.progressBar) {
       elements.progressBar.max = Math.floor(duration);
       elements.progressBar.value = Math.floor(currentTime);
@@ -109,6 +98,16 @@ const audioPlayer = (() => {
       "--progress-radius",
       `${progress * 360}deg`
     );
+    // poing
+    document
+      .querySelector(".moving-image")
+      .style.setProperty("--progress-percentage", `${progress * 100}%`);
+
+    // dessin
+    let newOffset = totalLength * (1 - progress);
+    document
+      .querySelector("#progressPath")
+      .style.setProperty("--dashoffset", newOffset);
   };
 
   // Recherche dans la piste
@@ -239,3 +238,35 @@ const audioPlayer = (() => {
       displayError("Erreur lors du chargement des informations de la musique.")
     );
 })();
+
+// const range = document.querySelector("input[type=range]");
+// const totalLength = document.querySelector("#progressPath").getTotalLength();
+
+// range.addEventListener("input", (e) => {
+//   const progress = Number(e.target.value);
+
+//   document
+//     .querySelector(".container")
+//     .style.setProperty("--progress-percentage", `${progress}%`);
+
+//   let newOffset = totalLength * (1 - progress / 100);
+//   document
+//     .querySelector(".container")
+//     .style.setProperty("--dashoffset", newOffset);
+// });
+
+/*
+Affichage des erreurs
+const displayError = (message) => {
+  const errorElement = document.createElement("div");
+  errorElement.textContent = message;
+  errorElement.style.color = "red";
+  document.body.prepend(errorElement);
+};
+
+// Vérification de la présence des éléments obligatoires
+Object.entries(elements).forEach(([key, element]) => {
+  if (!element)
+    displayError(`Élément "${key}" manquant. Veuillez consulter le README.`);
+});
+*/
