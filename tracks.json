@@ -1,14 +1,38 @@
 [
   {
-    "title": "Outer Wilds",
-    "artist": "Andrew Prahlow",
-    "src": "music/OuterWilds.mp3",
-    "cover": "covers/OuterWilds.jpg"
+    "title": "Aria Math",
+    "artist": "C418",
+    "src": "music/aria-math.mp3",
+    "cover": "covers/aria-math.jpg"
   },
   {
-    "title": "Gucci Gang",
-    "artist": "Lil Pump",
-    "src": "music/GucciGang.mp3",
-    "cover": "covers/GucciGang.png"
+    "title": "Sweden",
+    "artist": "C418",
+    "src": "music/sweden.mp3",
+    "cover": "covers/sweden.jpg"
+  },
+  {
+    "title": "Les Petits cailloux",
+    "artist": "Roland Cristal",
+    "src": "music/les-petits-cailloux.mp3",
+    "cover": "covers/les-petits-cailloux.jpg"
+  },
+  {
+    "title": "Ta Grand-Mèrrrre",
+    "artist": "Moi",
+    "src": "music/ta-grand-mère.mp3",
+    "cover": "covers/ta-grand-mère.webp"
+  },
+  {
+    "title": "MACHTOU PICHTOU",
+    "artist": "PERCEVAL",
+    "src": "music/machtou-pichtou.mp3",
+    "cover": "covers/machtou-pichtou.jpg"
+  },
+  {
+    "title": "La Rirette",
+    "artist": "The Valayan's",
+    "src": "music/la-rirette.mp3",
+    "cover": "covers/la-rirette.png"
   }
 ]
