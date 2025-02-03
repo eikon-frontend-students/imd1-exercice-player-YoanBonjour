@@ -6,6 +6,18 @@
     <title>Player Musique</title>
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Pacifico&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <img src="Icône/yeux.svg" alt="yeux" id="yeux" />
@@ -14,36 +26,33 @@
 
     <h3 id="track-title">Titre</h3>
     <p id="track-artist">Artiste</p>
-    <div>
-      <span id="track-current-time">0:00</span>
-      /
-      <span id="track-duration">0:00</span>
-    </div>
     <input type="range" id="progress-bar" value="0" min="0" step="1" />
     <div>
       <button id="prev">
-        <img src="Icône/prev.svg" alt="prev" />
+        <img src="Icône/prev.svg" alt="prev" id="prevnext" />
       </button>
       <button id="play-pause">
         <span id="play-icon">
-          <img src="Icône/play.svg" alt="play" />
+          <img src="Icône/play.svg" alt="play" id="playpause" />
         </span>
         <span id="pause-icon">
-          <img src="Icône/stop.svg" alt="pause" />
+          <img src="Icône/stop.svg" alt="pause" id="playpause" />
         </span>
       </button>
       <button id="next">
-        <img src="Icône/next.svg" alt="next" />
+        <img src="Icône/next.svg" alt="next" id="prevnext" />
       </button>
     </div>
 
     <ul id="playlist">
       <template id="track-template">
         <li class="track">
+          <img class="playlist-cover" alt="playlist" />
           <h4 class="track-title">Titre</h4>
           <p class="track-artist">Artiste</p>
         </li>
       </template>
     </ul>
+    <img id="bruit" src="img/bruit.png" alt="bruit de la page" />
   </body>
 </html>

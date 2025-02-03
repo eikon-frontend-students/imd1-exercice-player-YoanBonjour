@@ -3,13 +3,13 @@
     "title": "Aria Math",
     "artist": "C418",
     "src": "music/aria-math.mp3",
-    "cover": "covers/aria-math.png"
+    "cover": "covers/aria-math.jpg"
   },
   {
-    "title": "La La La",
-    "artist": "Naughty Boy, Sam Smith",
-    "src": "music/la-la-la.mp3",
-    "cover": "covers/la-la-la.jpg"
+    "title": "Sweden",
+    "artist": "C418",
+    "src": "music/sweden.mp3",
+    "cover": "covers/sweden.jpg"
   },
   {
     "title": "Les Petits cailloux",
@@ -28,5 +28,11 @@
     "artist": "PERCEVAL",
     "src": "music/machtou-pichtou.mp3",
     "cover": "covers/machtou-pichtou.jpg"
+  },
+  {
+    "title": "La Rirette",
+    "artist": "The Valayan's",
+    "src": "music/la-rirette.mp3",
+    "cover": "covers/la-rirette.png"
   }
 ]
